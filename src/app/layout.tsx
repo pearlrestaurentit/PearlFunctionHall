@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import Navbar from "../components/Navbar";
 import Providers from "./providers";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-body' });
@@ -21,45 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${playfair.variable}`}>
-        {/* Full-width Glass Header */}
-        <header className="glass" style={{ 
-          position: 'fixed', 
-          top: 0, 
-          left: 0,
-          right: 0,
-          zIndex: 100,
-          padding: '1.25rem 0'
-        }}>
-          <div className="container" style={{
-            display: 'flex', 
-            justifyContent: 'space-between', 
-            alignItems: 'center'
-          }}>
-            <Link href="/" style={{ display: 'flex', flexDirection: 'column' }}>
-              <h1 style={{ margin: 0, color: '#fff', fontSize: '1.65rem', letterSpacing: '2px', fontFamily: 'var(--font-heading)', lineHeight: 1 }}>
-                THE PEARL<span style={{ color: 'var(--primary)' }}>.</span>
-              </h1>
-              <span style={{ fontSize: '0.62rem', letterSpacing: '3px', textTransform: 'uppercase', color: 'var(--primary)', fontWeight: 600, marginTop: '3px' }}>
-                Function Hall
-              </span>
-            </Link>
-            
-            {/* Desktop Nav */}
-            <nav className="desktop-nav" style={{ gap: '3rem', alignItems: 'center' }}>
-              <Link href="/" className="nav-link">Home</Link>
-              <Link href="/restaurant" className="nav-link">Restaurant & Catering</Link>
-              <Link href="/gallery" className="nav-link">Gallery</Link>
-              <Link href="/contact" className="nav-link" style={{ color: 'var(--primary)' }}>Enquire</Link>
-            </nav>
-
-            {/* Mobile Nav */}
-            <nav className="mobile-nav" style={{ gap: '1.5rem', alignItems: 'center' }}>
-              <Link href="/restaurant" className="nav-link">Restaurant</Link>
-              <Link href="/gallery" className="nav-link">Gallery</Link>
-              <Link href="/contact" className="nav-link" style={{ color: 'var(--primary)' }}>Enquire</Link>
-            </nav>
-          </div>
-        </header>
+        <Navbar />
 
         <Providers>
           {/* Main Content */}
@@ -93,8 +56,9 @@ export default function RootLayout({
               <div style={{ flex: '1 1 150px' }}>
                 <h3 style={{ marginBottom: '1.5rem', fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Explore</h3>
                 <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                  <li><Link href="/" className="nav-link">Home</Link></li>
-                  <li><Link href="/restaurant" className="nav-link">Restaurant & Catering</Link></li>
+                  <li><Link href="/banquets" className="nav-link">Banquets</Link></li>
+                  <li><Link href="/outdoor-catering" className="nav-link">Outdoor Catering</Link></li>
+                  <li><Link href="/restaurant" className="nav-link">Restaurant</Link></li>
                   <li><Link href="/gallery" className="nav-link">Gallery</Link></li>
                   <li><Link href="/contact" className="nav-link">Book Now</Link></li>
                 </ul>

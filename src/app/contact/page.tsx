@@ -200,6 +200,49 @@ export default function Contact() {
           </motion.div>
         </div>
       </section>
+
+      {/* Location Section */}
+      <section className="section">
+        <div className="container">
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4rem', alignItems: 'center' }}>
+            <div style={{ flex: '1 1 400px' }}>
+              <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', marginBottom: '1.5rem', color: '#fff' }}>
+                Find <span className="text-gold">Us</span>
+              </h2>
+              <h3 style={{ fontSize: '1.25rem', marginBottom: '0.5rem', color: '#fff' }}>The Pearl Function Hall</h3>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: 1.8, fontSize: '1.1rem' }}>
+                Opp. Forest Office, Day & Night Junction, Srikakulam
+              </p>
+              
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', marginBottom: '2.5rem' }}>
+                <div>
+                  <h4 style={{ color: 'var(--primary)', marginBottom: '0.25rem' }}>Hours of Operation</h4>
+                  <p style={{ color: 'var(--text-muted)' }}>Monday - Sunday: 11:00 AM - 11:00 PM</p>
+                </div>
+                <div>
+                  <h4 style={{ color: 'var(--primary)', marginBottom: '0.25rem' }}>Contact</h4>
+                  <p style={{ color: 'var(--text-muted)', marginBottom: '0.25rem' }}>+91 79979 95312</p>
+                  <p style={{ color: 'var(--text-muted)' }}>pearlrestaurentit@gmail.com</p>
+                </div>
+              </div>
+              <a href="https://maps.app.goo.gl/x3ZdQoFuVCCpvzwXA" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Get Directions
+              </a>
+            </div>
+            <div style={{ flex: '1 1 400px', position: 'relative', height: '400px', borderRadius: '12px', overflow: 'hidden', boxShadow: 'var(--shadow-lg)' }}>
+              <iframe
+                src="https://maps.google.com/maps?q=The%20Pearl%20Function%20Hall%20Srikakulam&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
